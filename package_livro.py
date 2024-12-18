@@ -6,17 +6,17 @@ class livro:
 
 	def _emprestar(self):
 		if self.emprestimo == True:
-			return f"Livro {self.titulo} não disponivel!"
+			return f"Livro {self.titulo} não disponivel."
 		elif self.emprestimo == False:
 			self.emprestimo = True
-			return f"Você pegou o livro {self.titulo}"
+			return f"Você pegou o livro {self.titulo}!"
 
 	def _devolver(self):
 		if self.emprestimo == False:
-			return f"Livro {self.titulo} não foi emprestado!"
+			return f"Livro {self.titulo} não foi emprestado."
 		elif self.emprestimo == True:
 			self.emprestimo = False
-			return f"Você devolveu o livro {self.titulo}"
+			return f"Você devolveu o livro {self.titulo}!"
 		
 	def __str__(self):
 		status = "emprestado" if self.emprestimo else "disponível"
