@@ -1,4 +1,4 @@
-from package_livro import livro
+from package.model.livro import livro
 
 class biblioteca:
     livros_biblioteca = 0

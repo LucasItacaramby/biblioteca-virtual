@@ -1,4 +1,4 @@
-from package_biblioteca import biblioteca
+from package.controllers.biblioteca import biblioteca
 from tkinter import messagebox
 import tkinter as tk
 

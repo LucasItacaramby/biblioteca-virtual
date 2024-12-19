@@ -9,7 +9,7 @@ Este é um projeto de uma Biblioteca Virtual implementado em Python. O projeto c
 ## Estrutura do Projeto
 
 ### Arquivos
-1. **`package_livro.py`**
+1. **`livro.py`**
    - Define a classe `livro`.
    - Cada instância da classe representa um livro com os atributos:
      - `titulo` (str): O título do livro.
@@ -20,7 +20,7 @@ Este é um projeto de uma Biblioteca Virtual implementado em Python. O projeto c
      - `_devolver()`: Marca o livro como devolvido.
      - `__str__()`: Retorna uma descrição legível do livro, incluindo o título, autor e status.
 
-2. **`package_biblioteca.py`**
+2. **`biblioteca.py`**
    - Define a classe `biblioteca`.
    - Gerencia uma coleção de objetos da classe `livro`.
    - Métodos principais:
@@ -29,7 +29,7 @@ Este é um projeto de uma Biblioteca Virtual implementado em Python. O projeto c
      - `emprestar(titulo)`: Marca um livro como emprestado.
      - `devolver(titulo)`: Marca um livro como devolvido.
 
-3. **`interface.py`**
+3. **`main.py`**
    - Implementa a interface gráfica do projeto usando `tkinter`.
    - Permite ao usuário interagir com a biblioteca por meio de uma GUI estilizada.
 
@@ -46,10 +46,10 @@ A aplicação permite:
 - O módulo padrão `tkinter` (incluso com o Python).
 
 ## Como Executar
-1. Certifique-se de que todos os arquivos (`package_livro.py`, `package_biblioteca.py` e `interface.py`) estão no mesmo diretório.
-2. Execute o arquivo `interface.py`:
+1. Certifique-se de que todos os arquivos (`livro.py`, `biblioteca.py` e `main.py`) estão no mesmo diretório.
+2. Execute o arquivo `main.py`:
    ```bash
-   python3 interface.py
+   python3 main.py
 3. Interaja com a interface gráfica para gerenciar a biblioteca.
 
 ## Exemplo de Uso
@@ -60,7 +60,10 @@ A aplicação permite:
 ## Estrutura do Código
    ```bash
    biblioteca_virtual/
-   ├── package_livro.py        # Classe livro
-   ├── package_biblioteca.py   # Classe biblioteca
-   ├── interface.py            # Interface gráfica com Tkinter
+   ├── package/
+   │   ├── controllers/
+   │   │   ├── biblioteca.py   # Classe biblioteca
+   │   ├── model/
+   │       ├── livro.py        # Classe livro
+   ├── main.py                 # Interface gráfica com Tkinter
    ├── README.md               # Documentação do projeto
