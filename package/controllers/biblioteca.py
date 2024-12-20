@@ -1,15 +1,20 @@
 from package.model.livro import livro
+from package.controllers.datajson import datarecord
 
 class biblioteca:
     livros_biblioteca = 0
     
     def __init__(self):
-        self.itens = []
+        self.database = datarecord()
+        self.itens = [self.database.load()]
 
     def add_livro(self, titulo, autor):
         biblioteca.livros_biblioteca += 1
         novolivro = livro(titulo, autor)
+
         self.itens.append(novolivro)
+        self.database.record(novolivro)
+
         return f"Livro {titulo} foi adicionado à biblioteca!"
 
     def buscar_livro(self, busca):

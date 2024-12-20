@@ -1,0 +1,12 @@
+[
+    {
+        "titulo": "1984",
+        "autor": "George",
+        "emprestimo": false
+    },
+    {
+        "titulo": "Arte da Guerra",
+        "autor": "Sun Tsu",
+        "emprestimo": false
+    }
+]
