@@ -1,3 +1,4 @@
+from package.model.livro import livro
 import json
 
 class datarecord:
@@ -22,7 +23,10 @@ class datarecord:
     def load(self):
         try:
             with open(self.filename, "r") as file:
-                self.models = json.load(file)
+                data = json.load(file)
+                for i in data:
+                    novolivro = livro(i['titulo'], i['autor'], i['emprestimo'])
+                    self.models.append(novolivro)
                 return self.models
         except FileNotFoundError as e:
             print(f"O arquivo {self.__filename} não existe!")

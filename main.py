@@ -18,11 +18,9 @@ def adicionar_livro():
         messagebox.showwarning("Erro", message="Por favor, preencha o título e o autor.")
 
 def listar_livro():
-    contagem = f"total de livros disponiveis: {biblioteca_int.livros_biblioteca}"
     itens = biblioteca_int.itens
 
     if itens:
-        lista = "\n".join([str(contagem)])
         lista = "\n".join([str(livro) for livro in itens])
         messagebox.showinfo("Livros na Biblioteca", message=lista)
     else:

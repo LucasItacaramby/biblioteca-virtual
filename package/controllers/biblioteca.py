@@ -6,11 +6,11 @@ class biblioteca:
     
     def __init__(self):
         self.database = datarecord()
-        self.itens = [self.database.load()]
+        self.itens = self.database.load()
 
     def add_livro(self, titulo, autor):
         biblioteca.livros_biblioteca += 1
-        novolivro = livro(titulo, autor)
+        novolivro = livro(titulo, autor, False)
 
         self.itens.append(novolivro)
         self.database.record(novolivro)

@@ -1,8 +1,8 @@
 class livro:
-	def __init__(self, titulo, autor):
+	def __init__(self, titulo, autor, emprestimo):
 		self.titulo = titulo
 		self.autor = autor
-		self.emprestimo = False
+		self.emprestimo = emprestimo
 
 	def _emprestar(self):
 		if self.emprestimo == True:
