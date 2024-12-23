@@ -1,12 +1,14 @@
-[
-    {
-        "titulo": "1984",
-        "autor": "George",
-        "emprestimo": false
-    },
-    {
-        "titulo": "Arte da Guerra",
-        "autor": "Sun Tsu",
-        "emprestimo": false
-    }
-]
+{
+    "livros": [
+        {
+            "titulo": "1984",
+            "autor": "George Orwell",
+            "emprestimo": false
+        },
+        {
+            "titulo": "A Arte da Guerra",
+            "autor": "Sun Tzu",
+            "emprestimo": false
+        }
+    ]
+}

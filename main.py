@@ -11,11 +11,28 @@ def adicionar_livro():
     autor = entrada_autor.get()
 
     if titulo and autor:
-        messagebox.showinfo("Sucesso", message=biblioteca_int.add_livro(titulo, autor))
-        entrada_titulo.delete(0, tk.END)
-        entrada_autor.delete(0, tk.END)
+        text = biblioteca_int.add_livro(titulo, autor)
+        if text == False:
+            messagebox.showwarning("Erro", message="Livro já presente na biblioteca.")
+        else:
+            messagebox.showinfo("Sucesso", message=text)
+            entrada_titulo.delete(0, tk.END)
+            entrada_autor.delete(0, tk.END)
     else:
         messagebox.showwarning("Erro", message="Por favor, preencha o título e o autor.")
+
+def remover_livro():
+    titulo = entrada_titulo.get()
+    
+    if titulo:
+        text = biblioteca_int.rm_livro(titulo)
+        if text == False:
+            messagebox.showwarning("Erro", message="Livro não está presente na biblioteca.")
+        else:
+            messagebox.showinfo("Sucesso", message=text)
+            entrada_titulo.delete(0, tk.END)
+    else:
+        messagebox.showwarning("Erro", message="Por favor, preencha o título.")
 
 def listar_livro():
     itens = biblioteca_int.itens
@@ -89,6 +106,10 @@ entrada_autor.grid(row=1, column=1, padx=5, pady=5)
 # botao para adicionar livros
 add = tk.Button(frame_principal, text="Adicionar Livro", command=adicionar_livro)
 add.grid(row=2, column=1, pady=10)
+
+# botao para remover livros
+add = tk.Button(frame_principal, text="Remover Livro", command=remover_livro)
+add.grid(row=2, column=0, pady=10)
 
 # campo para buscar livros
 tk.Label(frame_principal, text="Busca:").grid(row=3, column=0, sticky="w")
