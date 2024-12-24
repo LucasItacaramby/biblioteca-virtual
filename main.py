@@ -31,6 +31,7 @@ def remover_livro():
         else:
             messagebox.showinfo("Sucesso", message=text)
             entrada_titulo.delete(0, tk.END)
+            entrada_autor.delete(0, tk.END)
     else:
         messagebox.showwarning("Erro", message="Por favor, preencha o título.")
 
@@ -82,6 +83,8 @@ root = tk.Tk()
 root.title("Biblioteca Virtual")
 root.geometry("500x300")
 root.configure(bg="#ECE9D8")
+icon = tk.PhotoImage(file="icon.png")
+root.iconphoto(False, icon)
 
 root.option_add("*Font", "Tahoma 10")
 root.option_add("*Button.Background", "#F0F0F0")
