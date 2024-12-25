@@ -33,6 +33,7 @@ Este é um projeto de uma Biblioteca Virtual implementado em Python. O projeto c
 3. **`datajson.py`**
    - Define a classe `datarecord`.
    - Gerencia um banco de dados de objetos salvos pela classe `biblioteca`.
+   - Métodos principais:
      - `save(model)`: Salva um objeto no arquivo `database_livro.json`.
      - `load()`: Carrega os objetos salvos no arquivo `database_livro.json`.
      - `remove(titulo)`: Remove um objeto no arquivo `database_livro.json`.
