@@ -1,10 +1,10 @@
 # biblioteca-virtual
-Este projeto é uma aplicação de uma biblioteca virtual, desenvolvida em Python, que utiliza os conceitos de **Programação Orientada a Objetos (POO)**, uma interface gráfica criada com o **Tkinter** e um banco de dados utilizando o **Json**. A aplicação permite adicionar, listar, buscar, emprestar e devolver livros.
+Este projeto é uma aplicação de uma biblioteca virtual, desenvolvida em Python, que utiliza os conceitos de **Programação Orientada a Objetos (POO)**, uma interface gráfica criada com o **Tkinter** e um banco de dados utilizando o **Json**. A aplicação permite adicionar, remover, listar, buscar, emprestar e devolver livros.
 
-Este é um projeto de uma Biblioteca Virtual implementado em Python. O projeto consiste em três partes principais:
+Este é um projeto de uma Biblioteca Virtual implementado em Python. O projeto consiste em quatro partes principais:
 - **Classe `livro`**: Representa os livros na biblioteca, com informações como título, autor e status de empréstimo.
-- **Classe `biblioteca`**: Gerencia uma coleção de livros, permitindo adicionar, listar, emprestar e devolver livros.
-- **Classe `datarecord`**: Gerencia o banco de dados contendo em um arquivo .json, os livros salvos pela classe `biblioteca`.
+- **Classe `biblioteca`**: Gerencia uma coleção de livros, permitindo adicionar, remover, listar, emprestar e devolver livros.
+- **Classe `datarecord`**: Gerencia o banco de dados contendo em um arquivo `.json`, os livros salvos pela classe `biblioteca`.
 - **Interface Gráfica (GUI)**: Uma aplicação gráfica feita com `tkinter` para interagir com a biblioteca de maneira visual.
 
 ## Estrutura do Projeto
@@ -81,6 +81,7 @@ A aplicação permite:
    │   │   ├── datajson.py              # Classe datarecord
    │   ├── model/
    │       ├── livro.py                 # Classe livro
+   ├── diagrama de classes.pdf          # Documentação do projeto
    ├── icon.png                         # Arquivo .png para icone
    ├── main.py                          # Interface gráfica com Tkinter
    ├── README.md                        # Documentação do projeto
